@@ -5,4 +5,4 @@ RUN mkdir wheels
 COPY wheels/*.whl wheels
 RUN pip install wheels/*.whl
 
-ENTRYPOINT ["solara", "run", "solarathon.pages", "--host=0.0.0.0", "--port=80"]
+ENTRYPOINT ["solara", "run", "fund11.pages", "--host=0.0.0.0", "--port=80"]
