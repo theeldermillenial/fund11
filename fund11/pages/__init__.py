@@ -35,16 +35,16 @@ state = solara.reactive(GroupList(groups=[GroupInfo(path=g) for g in groups]))
 
 @solara.component
 def GroupItem(group_info: GroupInfo, current_selection: solara.Reactive):
-    with solara.Row(justify="start"):
-        solara.Button(
-            f"Group {group_info.path.name.replace('.md', '')}",
-            outlined=True,
-            color="primary",
-            style={"width": "100px"},
-            on_click=lambda: current_selection.set(group_info.path),
-        )
-        for v in group_info.votes:
-            solara.Button(icon_name="mdi-checkbox-blank-circle-outline", text=True)
+    # with solara.Row(justify="start"):
+    solara.Button(
+        f"Group {group_info.path.name.replace('.md', '')}",
+        outlined=True,
+        color="primary",
+        style={"width": "100px"},
+        on_click=lambda: current_selection.set(group_info.path),
+    )
+    # for v in group_info.votes:
+    #     solara.Button(icon_name="mdi-checkbox-blank-circle-outline", text=True)
 
 
 @solara.component
