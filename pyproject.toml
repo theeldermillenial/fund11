@@ -8,8 +8,5 @@ description = "Catalyst Fund 11 Browser"
 version = "0.0.1"
 dependencies = ["solara==1.23.0"]
 
-[project.optional-dependencies]
-dev = ["mypy", "requests", "pydantic", "yfinance", "mplfinance", "pandas_ta"]
-
 [tool.hatch.build]
-include = ["**/*.css", "**/*.py"]
+include = ["**/*.css", "**/*.py", "**/*.md"]
